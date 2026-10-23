@@ -87,13 +87,49 @@ section h3 {
 }
 
 .activity-participants ul {
-  padding-left: 20px;
+  list-style: none;
+  padding-left: 0;
 }
 
 .activity-participants li {
   padding: 2px 0;
   color: #555;
   overflow-wrap: anywhere;
+}
+
+.participant-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.participant-name {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.participant-remove {
+  flex: 0 0 28px;
+  width: 28px;
+  height: 28px;
+  display: inline-grid;
+  place-items: center;
+  padding: 0;
+  border-radius: 50%;
+  background-color: transparent;
+  color: #b42318;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.participant-remove:hover {
+  background-color: #ffebee;
+}
+
+.participant-remove:focus-visible {
+  outline: 2px solid #b42318;
+  outline-offset: 2px;
 }
 
 .activity-participants .empty-participants {
